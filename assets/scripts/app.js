@@ -6,6 +6,23 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+
 $(() => {
-  // your JS code goes here
-})
+  $("#upload-image").on("submit", (event) => {
+    event.preventDefault()
+    
+    const form = event.target;
+    const formData = new FormData(form);
+
+    $.ajax({
+      url: "http://localhost:4741/uploads",
+      method: "POST",
+      processData: false,
+      contentType: false,
+      data: formData
+    })
+      .then(() => console.log("success"))
+      .catch(console.error);
+  });
+});
+

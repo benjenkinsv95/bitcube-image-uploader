@@ -1,1 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+html {
+    /* 🎉 Gives a nice smooth transition when  you click on jump links like #hobbies or #rock */
+    scroll-behaviour: smooth;
+  
+    /* 🧹 Remove a pages default margin. Typically there are a few pixels on each side. */
+    margin: 0;
+  }
+  

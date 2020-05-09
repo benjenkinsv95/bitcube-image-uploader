@@ -6,6 +6,7 @@
     "software": "GNU GPLv3"
   },
   "dependencies": {
+    "aws-sdk": "^2.673.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.2",
     "jquery": "^3.3.1",

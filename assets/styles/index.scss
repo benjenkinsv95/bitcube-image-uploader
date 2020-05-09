@@ -1,3 +1,5 @@
+$primary: LightSkyBlue;
+
 @import '~bootstrap/scss/bootstrap';
 html {
     /* 🎉 Gives a nice smooth transition when  you click on jump links like #hobbies or #rock */
@@ -7,3 +9,75 @@ html {
     margin: 0;
   }
   
+  .image-container {
+    background-size: cover;
+    background-position: center;
+    background-image: url(./public/city.gif);
+
+    min-height: 100vh;
+    color: white;
+  }
+
+  .dark-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  .dialog-box {
+    background-color: #121212;
+    padding: 2rem;
+    border-radius: 2.5rem;;
+    border: 3px solid $primary;
+  }
+
+  .all-images {
+    padding-top: 2rem;
+    background-image: url(./public/dark.png);
+    color: $primary;
+  }
+
+  .all-images-heading {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .all-images-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+  }
+
+  .uploaded-image {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    flex-basis: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+  }
+
+  .uploaded-image > h2 {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+
+
+  @media(min-width: 768px) {
+    .uploaded-image {
+      flex-basis: calc((100% - 1rem) / 2);
+    }
+  }
+  @media(min-width: 1200px) {
+    .uploaded-image {
+      flex-basis: calc((100% - 2rem) / 3);
+    }
+  }

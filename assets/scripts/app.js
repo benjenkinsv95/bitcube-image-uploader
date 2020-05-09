@@ -6,11 +6,11 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-
+const { apiUrl } = require('./config')
 $(() => {
   const indexUploads = function () {
     return $.ajax({
-      url: "http://localhost:4741/uploads"
+      url: `${apiUrl}/uploads`
     });
   }
 
@@ -39,7 +39,7 @@ $(() => {
     const formData = new FormData(form);
 
     $.ajax({
-      url: "http://localhost:4741/uploads",
+      url: `${apiUrl}/uploads`,
       method: "POST",
       processData: false,
       contentType: false,

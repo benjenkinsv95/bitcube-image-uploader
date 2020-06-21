@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>BitCube Image Uploader</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:url"                content="https://benjenkinsv95.github.io/bitcube-image-uploader" />
+      <meta property="og:type"               content="website" />
+      <meta property="og:title"              content="Bitcube Image Uploader" />
+      <meta property="og:description"        content="Want to upload images? This is your site. Bitcube image uploader is a lite imgur clone, where you can upload and share images." />
+      <meta property="og:image"              content="https://i.imgur.com/tMPipBh.png" />
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <section class='image-container'>
+        <div class='dark-container'>
+          <div class="dialog-box text-center">
+            <h1 class="display-4 text-primary">BitCube Image Uploader</h1>
+            <form id='upload-image' enctype="multipart/form-data">
+              <div class='form-group'>
+                <input class='form-control' name='title' type='text' placeholder='Title'>
+                <small id="passwordHelpBlock" class="form-text text-muted text-left">
+                  *Optional
+                </small>
+              </div>
+              <div class='form-group'>
+                <label for="file-upload" class="btn btn-block btn-secondary text-white">
+                  Upload Image
+              </label>
+              <input id="file-upload" class='form-control-file' name='image' type='file'>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        
+      </section>
+      
+      <!-- Section to make black -->
+      <section class='all-images'>
+        <!-- Add a bootstrap container to keep content in center -->
+        <div class='container'>
+          <h2 class='all-images-heading text-center'>The images folks have been uploading</h2>
+        
+            <section class='all-images-container'>
+              
+            </section>
+        </div>
+      </section>
+
+      <section class='footer'>
+        <div class='container'>
+          <h4 class='text-center'>Created with ❤️ by <a class='text-secondary' href="https://ben-jenkins.com/">Ben Jenkins</a></h4>
+        </div>
+      </section>
+
+      <div class="modal fade" id="image-modal" tabindex="-1" role="dialog" aria-labelledby="image-modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+        <h5 class="modal-title text-primary" id="selected-img-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+            <img id='selected-img' class="img-fluid">
+            <div class="modal-footer">
+             <form class='form w-100'>
+              <div class='form-row w-100'>
+                <div class="form-group col">
+                  <label class='text-primary' for="image-url">Image url</label>
+                  <input class='form-control' id='image-url' name='image-url' type='text' placeholder='Title' disabled>
+                </div>
+              
+                <div class='form-group'>
+                  <label for="copy-to-clipboard">&nbsp;</label>
+                  <button type="button" id='copy-to-clipboard' class="btn btn-secondary form-control text-white" data-dismiss="modal">Copy 📎</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

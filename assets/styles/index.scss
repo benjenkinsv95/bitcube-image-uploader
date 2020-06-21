@@ -1,4 +1,5 @@
 $primary: LightSkyBlue;
+$secondary: HotPink;
 
 @import '~bootstrap/scss/bootstrap';
 html {
@@ -30,11 +31,15 @@ html {
   .dialog-box {
     background-color: #121212;
     padding: 2rem;
-    border-radius: 2.5rem;;
-    border: 3px solid $primary;
+    // border-radius: 2.5rem;;
+    border: 2px solid $primary;
   }
 
-  .all-images {
+  #file-upload {
+    display: none;
+  }
+
+  .all-images, .footer {
     padding-top: 2rem;
     background-image: url(./public/dark.png);
     color: $primary;
@@ -69,6 +74,11 @@ html {
     text-align: center;
   }
 
+  .uploaded-image:hover > h2 {
+    color: $secondary;
+    background-color: black;
+  }
+
 
 
   @media(min-width: 768px) {
@@ -81,3 +91,8 @@ html {
       flex-basis: calc((100% - 2rem) / 3);
     }
   }
+
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}

@@ -17,15 +17,17 @@
           <div class="dialog-box text-center">
             <h1 class="display-4 text-primary">BitCube Image Uploader</h1>
             <form id='upload-image' enctype="multipart/form-data">
-              <h2>Choose an image</h2>
               <div class='form-group'>
-                <input class='form-control' name='title' type='text' placeholder='Name'>
+                <input class='form-control' name='title' type='text' placeholder='Title'>
+                <small id="passwordHelpBlock" class="form-text text-muted text-left">
+                  *Optional
+                </small>
               </div>
               <div class='form-group'>
-              <input class='form-control-file' name='image' type='file'>
-              </div>
-              <div class='form-group'>
-                <input class='btn btn-block btn-primary' type='submit'>
+                <label for="file-upload" class="btn btn-block btn-primary">
+                  Upload Image
+              </label>
+              <input id="file-upload" class='form-control-file' name='image' type='file'>
               </div>
             </form>
           </div>
@@ -38,12 +40,47 @@
       <section class='all-images'>
         <!-- Add a bootstrap container to keep content in center -->
         <div class='container'>
-          <h2 class='all-images-heading text-center'>The images folks have been uploading</h3>
+          <h2 class='all-images-heading text-center'>The images folks have been uploading</h2>
         
             <section class='all-images-container'>
               
             </section>
         </div>
       </section>
+
+      <section class='footer'>
+        <div class='container'>
+          <h4 class='text-center'>Created with ❤️ by <a class='text-secondary' href="https://ben-jenkins.com/">Ben Jenkins</a></h4>
+        </div>
+      </section>
+
+      <div class="modal fade" id="image-modal" tabindex="-1" role="dialog" aria-labelledby="image-modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+        <h5 class="modal-title" id="selected-img-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+            <img id='selected-img' class="img-fluid">
+            <div class="modal-footer">
+             <form class='form w-100'>
+              <div class='form-row w-100'>
+                <div class="form-group col">
+                  <label for="image-url">Image url</label>
+                  <input class='form-control' id='image-url' name='image-url' type='text' placeholder='Title' disabled>
+                </div>
+              
+                <div class='form-group'>
+                  <label for="copy-to-clipboard">&nbsp;</label>
+                  <button type="button" id='copy-to-clipboard' class="btn btn-primary form-control text-white" data-dismiss="modal">Copy 📎</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </body>
 </html>

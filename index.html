@@ -24,7 +24,7 @@
                 </small>
               </div>
               <div class='form-group'>
-                <label for="file-upload" class="btn btn-block btn-primary">
+                <label for="file-upload" class="btn btn-block btn-secondary text-white">
                   Upload Image
               </label>
               <input id="file-upload" class='form-control-file' name='image' type='file'>
@@ -58,7 +58,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-        <h5 class="modal-title" id="selected-img-title"></h5>
+        <h5 class="modal-title text-primary" id="selected-img-title"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -68,13 +68,13 @@
              <form class='form w-100'>
               <div class='form-row w-100'>
                 <div class="form-group col">
-                  <label for="image-url">Image url</label>
+                  <label class='text-primary' for="image-url">Image url</label>
                   <input class='form-control' id='image-url' name='image-url' type='text' placeholder='Title' disabled>
                 </div>
               
                 <div class='form-group'>
                   <label for="copy-to-clipboard">&nbsp;</label>
-                  <button type="button" id='copy-to-clipboard' class="btn btn-primary form-control text-white" data-dismiss="modal">Copy 📎</button>
+                  <button type="button" id='copy-to-clipboard' class="btn btn-secondary form-control text-white" data-dismiss="modal">Copy 📎</button>
                 </div>
               </div>
               </form>

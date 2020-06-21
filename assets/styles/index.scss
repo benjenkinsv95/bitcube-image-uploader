@@ -1,5 +1,5 @@
-$primary: LightSkyBlue;
-$secondary: HotPink;
+$primary: #90caf9;
+$secondary: #f48fb1;
 
 @import '~bootstrap/scss/bootstrap';
 html {
@@ -29,7 +29,7 @@ html {
   }
 
   .dialog-box {
-    background-color: #121212;
+    background-color: #303030;
     padding: 2rem;
     // border-radius: 2.5rem;;
     border: 2px solid $primary;
@@ -45,6 +45,11 @@ html {
     color: $primary;
   }
 
+  .modal-content {
+    background-color: #303030;
+    color: $primary;
+  }
+
   .all-images-heading {
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -54,6 +59,7 @@ html {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
+     
   }
 
   .uploaded-image {
@@ -65,6 +71,8 @@ html {
     display: flex;
     align-items: flex-end;
     margin-bottom: 1rem;
+    user-select: none;
+    cursor: pointer;
   }
 
   .uploaded-image > h2 {
@@ -76,7 +84,7 @@ html {
 
   .uploaded-image:hover > h2 {
     color: $secondary;
-    background-color: black;
+    background-color: 303030;
   }
 
 

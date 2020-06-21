@@ -67,7 +67,7 @@ npm install
 ```
 3. Start Website
 ```sh
-npm run start
+grunt serve
 ```
 
 ## Roadmap
